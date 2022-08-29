@@ -30,6 +30,36 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Gmail Service -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('dIxrYgZAqt6MFkvtG');
+        })();
+    </script>
+
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+
+            // these IDs from the previous steps
+            emailjs.sendForm('service_5tsb0m6', 'template_mm7hdzb', this)
+                .then(function() {
+                    console.log('SUCCESS!');
+
+                    alert("Email send succesfully");
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert("Email Not Send");
+                });
+        });
+    }
+</script>
 </head>
 
 <body>
@@ -101,42 +131,52 @@
                 </div>
                 <div class="col-md-6 bg-dark d-flex align-items-center">
                     <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
-                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
-                        <h1 class="text-white mb-4">Book A Table Online</h1>
-                        <form>
+                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">Contact Us</h5>
+                        <h1 class="text-white mb-4">CONTACT US FOR A FREE TASTING!</h1>
+                        <form id="contact-form">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required name="name">
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required name="email">
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
+                                        <input type="text" class="form-control datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" required name="datetime">
                                         <label for="datetime">Date & Time</label>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select" id="select1">
-                                          <option value="1">People 1</option>
-                                          <option value="2">People 2</option>
-                                          <option value="3">People 3</option>
+                                        <input type="number" class="form-control" id="number" placeholder="Phone Number" required name="number">
+                                        <label for="number">Your Phone Number</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="select1" required name="select1">
+                                          <option value="Weeding">Weeding</option>
+                                          <option value="Birthday Parties">Birthday Parties</option>
+                                          <option value="Festivals">Festivals</option>
+                                          <option value="Corporate">Corporate</option>
+                                          <option value="Private Event">Private Event</option>
+
                                         </select>
-                                        <label for="select1">No Of People</label>
+                                        <label for="select1">Occasion Type</label>
                                       </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Special Request" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Special Request</label>
+                                        <textarea class="form-control" placeholder="Special Request" id="message" style="height: 100px" name="message"></textarea>
+                                        <label for="message">Message</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
