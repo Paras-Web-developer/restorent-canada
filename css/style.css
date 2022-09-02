@@ -214,7 +214,7 @@
 }
 
 .service-item:hover {
-    background: rgb(118, 121, 118);
+    background: #0f172bf3;
 }
 
 .service-item * {
