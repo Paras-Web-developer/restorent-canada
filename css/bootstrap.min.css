@@ -4792,7 +4792,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-dark .navbar-toggler {
-    color: #0F172B;
+    color: rgb(255, 255, 255);
     border-color: rgba(255, 255, 255, 0.1)
 }
 
@@ -8372,7 +8372,7 @@ fieldset:disabled .btn {
 }
 
 .bg-dark {
-    background-color: #F1F8FF !important
+    background-color: #0F172B !important
 }
 
 .bg-body {
