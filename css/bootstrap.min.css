@@ -3,21 +3,21 @@
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
-    --bs-pink: #3fc64d;
-    --bs-red: #16fe2f;
-    --bs-orange: #16fe2f;
-    --bs-yellow: #49cc56;
-    --bs-green: #198754;
-    --bs-teal: #20c997;
+    --bs-pink: #eb3a30;
+    --bs-red: #eb3a30;
+    --bs-orange: #eb3a30;
+    --bs-yellow: #eb3a30;
+    --bs-green: #eb3a30;
+    --bs-teal: #eb3a30;
     --bs-cyan: #0dcaf0;
     --bs-white: #fff;
     --bs-gray: #6c757d;
     --bs-gray-dark: #343a40;
-    --bs-primary: #16fe2f;
+    --bs-primary: #eb3a30;
     --bs-secondary: #6c757d;
-    --bs-success: #198754;
+    --bs-success: #eb3a30;
     --bs-info: #0dcaf0;
-    --bs-warning: #16fe2f;
+    --bs-warning: #eb3a30;
     --bs-danger: #dc3545;
     --bs-light: #F1F8FF;
     --bs-dark: #0F172B;
@@ -3078,14 +3078,14 @@ fieldset:disabled .btn {
 
 .btn-primary {
     color: #000;
-    background-color: #16fe2f;
-    border-color: #16fe2f
+    background-color: #ff3e34;
+    border-color: #ff4d00
 }
 
 .btn-primary:hover {
     color: #000;
-    background-color: #02600c;
-    border-color: #02600c
+    background-color: #eb39309d;
+    border-color: #eb3930a1
 }
 
 .btn-check:focus+.btn-primary,
@@ -7308,7 +7308,7 @@ fieldset:disabled .btn {
 }
 
 .border-primary {
-    border-color: #FEA116 !important
+    border-color: #0f172b !important
 }
 
 .border-secondary {
@@ -8286,7 +8286,7 @@ fieldset:disabled .btn {
 }
 
 .text-primary {
-    color: #16fe2f !important
+    color: #eb3a30 !important
 }
 
 .text-secondary {
