@@ -4486,7 +4486,9 @@ fieldset:disabled .btn {
     background-color: transparent;
     border: 1px solid transparent;
     border-radius: 2px;
-    transition: box-shadow 0.15s ease-in-out
+    transition: box-shadow 0.15s ease-in-out;
+    
+    
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -4790,7 +4792,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-dark .navbar-toggler {
-    color: rgba(255, 255, 255, 0.55);
+    color: #0F172B;
     border-color: rgba(255, 255, 255, 0.1)
 }
 
@@ -8370,7 +8372,7 @@ fieldset:disabled .btn {
 }
 
 .bg-dark {
-    background-color: #0F172B !important
+    background-color: #F1F8FF !important
 }
 
 .bg-body {
