@@ -365,9 +365,9 @@
     transform: scale(1.1);
 }
 
-.team-item:hover {
+/* .team-item:hover {
     height: 100%;
-}
+} */
 
 .team-item .btn {
     border-radius: 38px 38px 0 0;
