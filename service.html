@@ -67,7 +67,7 @@
                             <a href="index.html" class="nav-item nav-link">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
                             <a href="service.html" class="nav-item nav-link active">Service</a>
-                            <!-- <a href="menu.html" class="nav-item nav-link">Menu</a> -->
+                            <a href="menu.html" class="nav-item nav-link">Menu</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu m-0">
@@ -197,11 +197,15 @@
                         <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.15s">
                             <div class="service-item rounded pt-3">
                                 <div class="p-4 text-center">
-                                    <video width="220" height="210" controls>
-                                        <source src="img/chef4video.mp4" type="video/mp4">
-                                        <source src="movie.ogg" type="video/ogg">
-                                        Your browser does not support the video tag.
-                                    </video>
+                                    <div class="video1">
+                                        <button type="button" class="btn-play" data-bs-toggle="modal"
+                                            data-src="https://www.youtube.com/embed/LEhiP_D4B8A"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            data-bs-target="#videoModal">
+                                            <span></span>
+                                        </button>
+                                    </div>
                                     <h5 class="mb-0 text-primary">Video</h5>
 
                                 </div>
@@ -295,6 +299,7 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+    </div>
 </body>
 
 </html>
