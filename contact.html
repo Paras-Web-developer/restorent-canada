@@ -4,7 +4,7 @@
 <head>
     <link rel="ads.txt" href="/ads.txt">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9456800622106077"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <title>Shahji catering</title>
     <meta charset="UTF-8">
@@ -55,33 +55,42 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
+    <!-- tostify message -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
     <!-- Gmail Service -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script type="text/javascript">
-        (function () {
+        ( function ()
+        {
             // https://dashboard.emailjs.com/admin/account
-            emailjs.init('dIxrYgZAqt6MFkvtG');
-        })();
+            emailjs.init( 'dIxrYgZAqt6MFkvtG' );
+        } )();
     </script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Include Toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!-- Your JavaScript code here -->
     <script type="text/javascript">
-        window.onload = function () {
-            document.getElementById('contact-form').addEventListener('submit', function (event) {
+        window.onload = function ()
+        {
+            document.getElementById( 'contact-form' ).addEventListener( 'submit', function ( event )
+            {
                 event.preventDefault();
                 // generate a five digit number for the contact_number variable
-
                 // these IDs from the previous steps
-                emailjs.sendForm('service_5tsb0m6', 'template_mm7hdzb', this)
-                    .then(function () {
-                        console.log('SUCCESS!');
-
-                        alert("Email send succesfully");
-                    }, function (error) {
-                        console.log('FAILED...', error);
-                        alert("Email Not Send");
-                    });
-            });
+                emailjs.sendForm( 'service_5tsb0m6', 'template_mm7hdzb', this )
+                    .then( function ()
+                    {
+                        toastr.success( 'Email sent successfully' ); // Display success toast
+                    }, function ( error )
+                    {
+                        console.log( 'FAILED...', error );
+                        toastr.error( 'Failed to send email' ); // Display error toast
+                    } );
+            } );
         }
     </script>
 </head>
@@ -108,7 +117,7 @@
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                     <a href="" class="navbar-brand p-0">
                         <!-- <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>shahjicatering</h1> -->
-                        <img src="img/favicon.jpeg" alt="Logo " style= "margin-left: 13px; width: 127px;">
+                        <img src="img/favicon.jpeg" alt="Logo " style="margin-left: 13px; width: 127px;">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse">
