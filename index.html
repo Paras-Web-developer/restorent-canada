@@ -58,6 +58,9 @@
     <!-- Gmail Service -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
+    <!-- tostify message -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
     <script type="text/javascript">
         ( function ()
         {
@@ -67,6 +70,10 @@
     </script>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Include Toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!-- Your JavaScript code here -->
     <script type="text/javascript">
         window.onload = function ()
         {
@@ -74,18 +81,15 @@
             {
                 event.preventDefault();
                 // generate a five digit number for the contact_number variable
-
                 // these IDs from the previous steps
-                emailjs.sendForm( 'service_5tsb0m6', 'template_mm7hdzb', this )
+                emailjs.sendForm( 'service_5tsb0m', 'template_mm7hdzb', this )
                     .then( function ()
                     {
-                        console.log( 'SUCCESS!' );
-
-                        alert( "Email send succesfully" );
+                        toastr.success( 'Email sent successfully' ); // Display success toast
                     }, function ( error )
                     {
                         console.log( 'FAILED...', error );
-                        alert( "Email Not Send" );
+                        toastr.error( 'Failed to send email' ); // Display error toast
                     } );
             } );
         }
