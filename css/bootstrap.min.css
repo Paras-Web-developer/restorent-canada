@@ -1,4 +1,3 @@
-
 :root {
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
@@ -30,7 +29,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -4315,10 +4314,15 @@ fieldset:disabled .btn {
 
 .nav {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding-left: 0;
     margin-bottom: 0;
-    list-style: none
+    list-style: none;
+    overflow: scroll
+}
+
+.nav::-webkit-scrollbar {
+    display: none;
 }
 
 .nav-link {
@@ -4487,8 +4491,8 @@ fieldset:disabled .btn {
     border: 1px solid transparent;
     border-radius: 2px;
     transition: box-shadow 0.15s ease-in-out;
-    
-    
+
+
 }
 
 @media (prefers-reduced-motion: reduce) {
